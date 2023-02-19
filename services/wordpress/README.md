@@ -8,7 +8,7 @@ docker-compose up -d
 
 > La instalación puede demorar dependiendo la velocidad de internet y los recursos de hardware que tenga.
 
-Ingrese con el navegador al directorio:
+Ingrese esta URL en el navegador:
 ~~~
 http://localhost:8080
 ~~~
