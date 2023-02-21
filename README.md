@@ -3,6 +3,7 @@ Este repositorio es una recopilación de servicios que se pueden implementar en 
 Lista de servicios disponibles:
 * Nextcloud
 * WordPress
+* Dokuwiki
 
 # Requerimientos
 Lista de requerimientos para implementación de estos servicios.
