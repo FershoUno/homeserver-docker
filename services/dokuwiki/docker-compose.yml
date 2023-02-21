@@ -1,0 +1,19 @@
+version: '2'
+# FershoUno
+services:
+  dokuwiki:
+    image: docker.io/bitnami/dokuwiki:latest
+    ports:
+      - '9000:8080'
+    volumes:
+      - 'dokuwiki_data:/bitnami/dokuwiki'
+    environment:
+      - DOKUWIKI_USERNAME=administrador
+      - DOKUWIKI_FULL_NAME=Administrador Dokuwiki
+      - DOKUWIKI_PASSWORD=b29fe4587166a22e36be619aad4ceb75
+      - DOKUWIKI_EMAIL=administrador@example.com
+      - DOKUWIKI_WIKI_NAME=Personal Dokuwiki
+     
+volumes:
+  dokuwiki_data:
+    driver: local
