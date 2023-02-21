@@ -16,7 +16,7 @@ http://localhost:9000
 ## Credenciales
 Esta credencial es para acceder como administrador a Dokuwiki
 ~~~
-  user      : administrador
+  usuario   : administrador
   contraseña: b29fe4587166a22e36be619aad4ceb75
 ~~~
 
