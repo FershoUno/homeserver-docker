@@ -1,8 +1,9 @@
-version: '3'
+version: '3.5'
 # FershoUno
 services:
     db:
         image: mariadb:latest
+	container_name: wordpress_db
         volumes:
             - data:/var/lib/mysql
         environment:
@@ -10,8 +11,12 @@ services:
             - MYSQL_DATABASE=wordpress
             - MYSQL_USER=administrador
             - MYSQL_PASSWORD=c486f6ccdb74478956d3b23752b9dc2b
+        networks:
+          services:
+            ipv4_address: 10.0.3.10
     web:
         image: wordpress:latest
+	container_name: wordpress_web
         depends_on:
             - db
         volumes:
@@ -22,6 +27,15 @@ services:
             - WORDPRESS_DB_HOST=db
         ports:
             - 8080:80
+        networks:
+          services:
+            ipv4_address: 10.0.3.11
 
 volumes:
     data:
+networks:
+  services:
+    name: wordpress_net
+    ipam:
+      config:
+        - subnet 10.0.3.0/24

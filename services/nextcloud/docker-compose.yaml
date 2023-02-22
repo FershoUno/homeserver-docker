@@ -1,9 +1,10 @@
-version: '2'
+version: '3.5'
 # FershoUno
 services:
 
   db:
     image: mariadb:latest
+    container_name: nextcloud_db
     restart: always
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW 
     volumes:
@@ -13,9 +14,13 @@ services:
       - MYSQL_PASSWORD=e57fdd90fc06a8e9ff198e3654fae712
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
+    networks:
+      services:
+        ipv4_address: 10.0.2.10
 
   nextcloud:
     image: nextcloud:latest
+    container_name: nextcloud_web
     restart: always
     ports:
       - "8000:80"
@@ -31,7 +36,16 @@ services:
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
+    networks:
+      services:
+        ipv4_address: 10.0.2.11
 
 volumes:
   nextcloud:
   db:      
+networks:
+  services:
+    name: nextcloud_net
+    ipam:
+      config:
+        - subnet: 10.0.2.0/24
