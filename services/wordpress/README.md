@@ -20,7 +20,7 @@ Esta configuración adicional se debe realizar ya que Nextcloud por defecto no v
 Este mensaje se debe a que el dominio que utiliza Nextcloud es 0.0.0.0, los que significa que se tiene que configurar el archivo __config.php__ para asingar otro dominio de __confianza__.
 ~~~
 Acceso a través de un dominio del que no se confía
-etc.. etc..
+etc.. etc.. etc..
 
 
 ~~~
