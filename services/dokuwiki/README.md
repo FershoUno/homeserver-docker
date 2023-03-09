@@ -1,4 +1,4 @@
-# WordPress
+# Dokuwiki
 
 Implementación de Dokuwiki Local ejecutando:  
 
