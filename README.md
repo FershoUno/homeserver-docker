@@ -11,8 +11,6 @@ Lista de requerimientos para implementación de estos servicios.
 * docker-compose
 * Editor de Textos (opional, si requiere modificar alguna config).
 
-> Espero que les sirva de utilidad.
-
 # Recomendación
 Las siguientes recomendaciones es para tener un mejor uso de los servicios
 
