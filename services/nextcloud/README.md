@@ -50,7 +50,7 @@ Añadir la dirección IP con el puerto que esta corriendo el Nextcloud
 ~~~
 'trusted_domains' =>
 array (
-0 => '0.0.0.0:8000', 192.168.2.150:8000,
+0 => '0.0.0.0:8000', '192.168.2.150:8000',
 )
 ~~~
 
